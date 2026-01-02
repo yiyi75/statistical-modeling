@@ -142,3 +142,42 @@ cat(sprintf("CFI = %.3f, TLI = %.3f, RMSEA = %.3f, SRMR = %.3f\n",
             fitMeasures(wb_cfa_fit, "rmsea"),
             fitMeasures(wb_cfa_fit, "srmr")))
 
+
+# Revised model with suggested modifications ----
+wb_cfa_model_revised <- '
+  Positive_WB =~ LifeSatisfaction1 + LifeSatisfaction2 + LifeSatisfaction3 + Happy
+  Negative_WB =~ Angry + Sad + Anxious + Depressed + Worried
+  
+  # Add suggested error covariances
+  Angry ~~ Depressed
+  Sad ~~ Depressed
+  Sad ~~ Worried
+  LifeSatisfaction1 ~~ LifeSatisfaction3
+'
+# Fit revised CFA model
+wb_cfa_fit_revised <- cfa(
+  wb_cfa_model_revised, 
+  data = wb_cfa_data,
+  estimator = "ML",  
+  missing = "fiml"   
+)
+# Summarize revised CFA results ----
+cat("\nREVISED CFA RESULTS\n")
+# Model fit summary
+fit_summary_revised <- summary(wb_cfa_fit_revised, 
+                       fit.measures = TRUE, 
+                       standardized = TRUE,
+                       rsquare = TRUE)
+## Extract and display key fit indices ----
+cat("REVISED MODEL FIT INDICES:\n")
+cat(sprintf("Chi-square: χ²(%.0f) = %.2f, p = %.4f\n",
+            fit_summary_revised$test$standard$df,
+            fit_summary_revised$test$standard$stat,
+            fit_summary_revised$test$standard$pvalue))
+cat(sprintf("CFI:  %.3f\n", fitMeasures(wb_cfa_fit_revised, "cfi")))
+cat(sprintf("TLI:  %.3f\n", fitMeasures(wb_cfa_fit_revised, "tli")))
+cat(sprintf("RMSEA: %.3f (90%% CI: %.3f-%.3f)\n",
+            fitMeasures(wb_cfa_fit_revised, "rmsea"),
+            fitMeasures(wb_cfa_fit_revised, "rmsea.ci.lower"),
+            fitMeasures(wb_cfa_fit_revised, "rmsea.ci.upper")))
+

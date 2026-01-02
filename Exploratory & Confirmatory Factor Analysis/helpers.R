@@ -27,7 +27,8 @@ prepare_wellbeing_items <- function(df) {
       Sad = reverse_score(PersonalWB_06, 7),
       Anxious = reverse_score(PersonalWB_07, 7),
       Depressed = reverse_score(PersonalWB_09, 7),
-      Worried = reverse_score(PersonalWB_10, 7)
+      Worried = reverse_score(PersonalWB_10, 7),
+      Irritated = reverse_score(PersonalWB_11, 7)
     ) %>%
     dplyr::select(
       LifeSatisfaction1 = PersonalWB_01,  # Life satisfaction item 1
@@ -38,7 +39,9 @@ prepare_wellbeing_items <- function(df) {
       Anxious,
       Depressed,
       Worried,
-      Happy = PersonalWB_08   # Happiness
+      Irritated,
+      Happy = PersonalWB_08,   # Happiness
+      Cheerful = PersonalWB_05  # Cheerfulness
     ) %>%
     tidyr::drop_na()
   

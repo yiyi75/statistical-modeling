@@ -48,7 +48,7 @@ efa_2 <- fa(wb_items, 2, rotate = "oblimin")
 efa_3 <- fa(wb_items, 3, rotate = "oblimin")
 
 anova(efa_1, efa_2, efa_3)
-efa_1 # explained 47% of the total variance
+efa_1 # explained 48% of the total variance
 efa_2 # explained 57% of the total variance
 efa_3 # explained 62% of the total variance
 efa_1$RMSEA
@@ -68,14 +68,12 @@ extract_items(selected_efa$loadings)
 
 
 # Conclusion: 
-# Parallel analysis using principal components suggested a two-component solution, 
-# whereas parallel analysis based on common factor extraction suggested a three-factor solution. 
-# Examination of the three-factor model indicated that the additional factor 
-# primarily split negative affect items (e.g., anger vs. sadness/anxiety) 
-# without yielding a substantively distinct construct. 
-# Given the high inter-factor correlations and limited interpretability of the third factor, 
-# a two-factor solution was selected as the most parsimonious and theoretically 
-# coherent representation of well-being.
+# Exploratory factor analysis revealed a clear two-factor structure for well-being items.
+# Parallel analysis supported a two-factor solution, which explained 57% of the total variance.
+# Model fit indices showed improvement from the one-factor solution (RMSEA = 0.18) 
+# to the two-factor solution (RMSEA = 0.15), with further improvement in the three-factor 
+# solution (RMSEA = 0.14). However, the three-factor solution showed problematic factor 
+# correlations and ambiguous interpretability.
 
 # 2-Factor EFA Results Interpretation:
 # Factor 1: Life Satisfaction + Happiness
