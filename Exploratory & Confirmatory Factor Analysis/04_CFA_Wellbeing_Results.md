@@ -84,7 +84,6 @@ A two-factor confirmatory factor analysis was conducted to validate the well-bei
 | Interpretability | Simple | Slightly complex | = |
 | Practical utility | Limited | Enhanced | ✓ |
 
----
 
 ## Limitations and Considerations
 
@@ -95,10 +94,8 @@ A two-factor confirmatory factor analysis was conducted to validate the well-bei
 | N=169 | Adequate but limited | Caution with complex models |
 | High factor correlation (-0.812) | Possible higher-order factor | Test alternative structures |
 
----
 
 ## Overall Conclusion
-
 The two-factor well-being structure demonstrates acceptable construct validity when validated in independent data. While initial fit was marginal, adding theoretically justified correlated residuals significantly improved the model to acceptable-to-good fit levels. The model successfully incorporates all items from exploratory analysis, maintains strong factor loadings, and provides a valid operationalization of well-being for subsequent analyses.
 
 **Recommendation:** Use the revised model for further analyses, acknowledging its limitations while recognizing its comprehensive coverage and improved fit compared to the initial specification.
