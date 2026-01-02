@@ -2,13 +2,23 @@
 # and creates simple well-being indices from assessment data.
 
 # Load libraries ----
-library(dplyr)
-library(tidyr)
-library(psych)
-library(paran)
+packages <- c("dplyr", "tidyr", "psych", "paran")
 
-# Function to reverse score items
+# Check if required packages are installed
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())))
+}
+options(readr.num_columns = 0)
+for (thispack in packages) {
+  library(thispack,character.only=TRUE,quietly=TRUE,verbose=FALSE)
+}
+
+# Load functions ----
 source("helpers.R")
+
+# Set directory ----
+sourcedir = "E:/statistical-modeling/Exploratory & Confirmatory Factor Analysis/"
+setwd(sourcedir)
 
 # Load data ----
 df <- read.csv("data/assessment1.csv")

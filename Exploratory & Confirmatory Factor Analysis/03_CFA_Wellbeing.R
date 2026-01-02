@@ -2,16 +2,27 @@
 # derived from EFA in Assessment 1 using independent data (Assessment 2).
 
 # Load libraries ----
-library(lavaan)
-library(dplyr)
-library(semTools)
+packages <- c("dplyr", "lavaan", "semTools")
+
+# Check if required packages are installed
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())))
+}
+options(readr.num_columns = 0)
+for (thispack in packages) {
+  library(thispack,character.only=TRUE,quietly=TRUE,verbose=FALSE)
+}
+
+# Load functions ----
+source("helpers.R")
+
+# Set directory ----
+sourcedir = "E:/statistical-modeling/Exploratory & Confirmatory Factor Analysis/"
+setwd(sourcedir)
 
 # Load data ----
 df2 <- read.csv("data/assessment2.csv")
 names(df2)
-
-# Function to reverse score items
-source("helpers.R")
 
 # Prepare well-being items for CFA ----
 wb_cfa_data <- prepare_wellbeing_items(df2)
