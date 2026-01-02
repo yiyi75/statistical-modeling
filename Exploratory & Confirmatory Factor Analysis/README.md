@@ -1,6 +1,6 @@
 # Composing Wellbeing from Survey Items
-- Publication link: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1472125/full
-- Full analysis scripts and data: https://osf.io/pzqhk/overview
+- My publication link: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1472125/full
+- My full analysis scripts and data: https://osf.io/pzqhk/overview
 
 ## Overview
 Demonstration of exploratory and confirmatory factor analysis skills applied to well-being assessment. Identifies optimal factor structure for survey-based well-being measures.
