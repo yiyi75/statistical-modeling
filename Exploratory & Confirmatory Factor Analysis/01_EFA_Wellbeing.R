@@ -75,8 +75,3 @@ extract_items(selected_efa$loadings)
 # solution (RMSEA = 0.14). However, the three-factor solution showed problematic factor 
 # correlations and ambiguous interpretability.
 
-# 2-Factor EFA Results Interpretation:
-# Factor 1: Life Satisfaction + Happiness
-# Factor 2: Negative Affect (Angry, Sad, Anxious, Depressed, Worried)
-
-

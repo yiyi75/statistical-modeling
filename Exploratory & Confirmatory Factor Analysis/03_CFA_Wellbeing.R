@@ -21,8 +21,8 @@ cat("Sample size for CFA:", nrow(wb_cfa_data), "\n")
 # Define CFA model ----
 # Two-factor model (Positive vs Negative Well-being)
 wb_cfa_model <- '  # Latent variables
-  Positive_WB =~ LifeSatisfaction1 + LifeSatisfaction2 + LifeSatisfaction3 + Happy
-  Negative_WB =~ Angry + Sad + Anxious + Depressed + Worried
+  Positive_WB =~ LifeSatisfaction1 + LifeSatisfaction2 + LifeSatisfaction3 + Happy + Cheerful
+  Negative_WB =~ Angry + Sad + Anxious + Depressed + Worried + Irritated
   
   # Correlated errors (based on modification indices if needed)
   # LifeSatisfaction1 ~~ LifeSatisfaction2
@@ -145,14 +145,14 @@ cat(sprintf("CFI = %.3f, TLI = %.3f, RMSEA = %.3f, SRMR = %.3f\n",
 
 # Revised model with suggested modifications ----
 wb_cfa_model_revised <- '
-  Positive_WB =~ LifeSatisfaction1 + LifeSatisfaction2 + LifeSatisfaction3 + Happy
-  Negative_WB =~ Angry + Sad + Anxious + Depressed + Worried
+  Positive_WB =~ LifeSatisfaction1 + LifeSatisfaction2 + LifeSatisfaction3 + Happy + Cheerful
+  Negative_WB =~ Angry + Sad + Anxious + Depressed + Worried + Irritated
   
   # Add suggested error covariances
-  Angry ~~ Depressed
+  Anxious ~~   Worried
+  Cheerful ~~  Happy
+  Angry ~~ Irritated
   Sad ~~ Depressed
-  Sad ~~ Worried
-  LifeSatisfaction1 ~~ LifeSatisfaction3
 '
 # Fit revised CFA model
 wb_cfa_fit_revised <- cfa(
