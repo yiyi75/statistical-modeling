@@ -1,4 +1,4 @@
-# Case Study: Composing Wellbeing from Survey Items
+# Composing Wellbeing from Survey Items
 - Publication link: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1472125/full
 - Full analysis scripts and data: https://osf.io/pzqhk/overview
 
