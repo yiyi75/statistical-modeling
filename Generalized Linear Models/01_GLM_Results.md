@@ -46,13 +46,12 @@ The analysis employs survey-weighted logistic regression, poisson regression, an
 
 ## Public Health Implications
 - **Strong Evidence for Intervention Targets**:
-
-    1. Exercise promotion: Strongest, most consistent protective effect
+    1) Exercise promotion: Strongest, most consistent protective effect
     - 33% lower depression odds
     - 32% fewer mental health days
 
-    2. Gender-specific approaches: Females at higher risk
+    2) Gender-specific approaches: Females at higher risk
     - 69% higher depression odds
 
-    3. Education: Each education level reduces depression risk
+    3) Education: Each education level reduces depression risk
     - 12% lower odds per level
