@@ -3,6 +3,8 @@
 
 This project demonstrates the application of generalized linear models (GLMs) to real-world health survey data. The analyses focus on selecting appropriate link functions and distributions based on outcome characteristics, and on interpreting model results using effect sizes and estimated marginal means.
 
+Data: The CDC Behavioral Risk Factor Surveillance System (BRFSS) 2022 data [https://www.kaggle.com/datasets/ariaxiong/behavioral-risk-factor-surveillance-system-2022]. 
+
 ## Research Questions
 - Which demographic and behavioral factors predict the likelihood of mental health risk?
 - When are Poisson models insufficient for count outcomes?

@@ -26,8 +26,7 @@ sourcedir = "E:/statistical-modeling/Generalized Linear Models/"
 setwd(sourcedir)
 
 # 1. Load Data ----
-brfss <- read.csv("data/brfss2022.csv") 
-# retrieved from Kaggle: "https://www.kaggle.com/datasets/ariaxiong/behavioral-risk-factor-surveillance-system-2022"
+brfss <- read.csv("data/brfss2022.csv")
 names(brfss)
 
 # remove X_ from each column name
